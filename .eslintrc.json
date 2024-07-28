@@ -1,0 +1,14 @@
+{
+  "extends": ["next/babel", "next/core-web-vitals", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "warn",
+    "no-console": "warn",
+    "no-arrow-functions": [
+      true,
+      {
+        "allow": ["_callback"]
+      }
+    ]
+  }
+}

@@ -1,0 +1,110 @@
+@use '../../styles/tools/addFlex';
+@use '../../styles/settings/color';
+@use '../../styles/settings/font';
+
+.login-page {
+    @include addFlex.flex-container($jc: center, $ai: center);
+    height: 100vh;
+
+    &__card {
+        @include addFlex.flex-container($direction: column, $ai: center);
+        padding-top: 10px;
+        width: 550px;
+        background: color.$color-bg-white;
+        border-radius: 10px;
+        box-shadow: color.$color-box-shadow-login;
+    }
+
+    &__app-head {
+        @include addFlex.flex-container($ai: center);
+        &__app-logo {
+            margin-top: 20px;
+            margin-bottom: 10px;
+            width: 40px;
+        }
+    }
+
+    &__app-title {
+        font-family: font.$fontset-normal;
+        font-style: normal;
+        font-weight: font.$font-semi-bold;
+        font-size: font.$font-17;
+        line-height: 0px;
+        text-align: center;
+        letter-spacing: 1px;
+        color: color.$color-text-black;
+        margin-left: 3px;
+        padding-top: 8px;
+    }
+    &__body {
+        width: 85%;
+        line-height: 0px;
+        margin-bottom: 30px;
+    }
+    &__body-title {
+        font-family: font.$fontset-normal;
+        font-style: normal;
+        font-size: font.$font-15;
+        font-weight: font.$font-bold;
+        color: color.$color-text-black;
+        line-height: 5px;
+    }
+    &__body-sub-title {
+        font-family: font.$fontset-normal;
+        font-style: normal;
+        font-size: font.$font-14;
+        font-weight: font.$font-regular;
+        color: color.$color-text-gray;
+        line-height: 5px;
+    }
+    &__body-form {
+        margin-top: 30px;
+    }
+    &__body-input-field {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 10px 10px 16px;
+        height: 40px;
+        background: color.$color-bg-white;
+        border: 1px solid color.$color-border-slate-gray;
+        border-radius: 8px;
+        margin-top: 12px;
+        margin-bottom: 10px;
+        color: color.$color-text-dark-gray;
+        font-family: font.$fontset-normal;
+        font-style: normal;
+        font-weight: font.$font-regular;
+        font-size: font.$font-14;
+
+        &:focus {
+            outline: none;
+            border: 1px solid color.$color-bg-light-aqua;
+            box-shadow: color.$color-box-shadow-input-focus;
+        }
+    }
+    &__btn {
+        width: 100%;
+        height: 40px;
+        margin-top: 10px;
+        border: none;
+        background: color.$color-bg-blue-violet;
+        border-radius: 8px;
+        cursor: pointer;
+        color: color.$color-text-white;
+
+        &:hover {
+            transform: scale(1.01);
+            box-shadow: color.$color-box-shadow-loginBtn;
+        }
+    }
+
+    &__error {
+        color: color.$color-text-red;
+        font-family: font.$fontset-normal;
+        font-style: normal;
+        font-weight: font.$font-regular;
+        font-size: font.$font-12;
+        margin-top: 0px;
+        margin-bottom: 20px;
+    }
+}

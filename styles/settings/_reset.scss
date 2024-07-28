@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $fontset-normal;
+}
+
+ul,
+li {
+    list-style: none;
+
+    &::before {
+        content: '' !important;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+p,
+pre {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
